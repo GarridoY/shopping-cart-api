@@ -1,11 +1,9 @@
 package org.example.shoppingcartapi.service;
 
-import org.example.shoppingcartapi.entity.Cart;
-import org.example.shoppingcartapi.entity.Item;
+import org.example.shoppingcartapi.response.ItemResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 /**
  * @author Daniél Garrido
@@ -13,9 +11,7 @@ import java.util.Optional;
 @Service
 public interface CartService {
 
-    Optional<Cart> findCart(Long id);
-
-    List<Item> findAllItems(Cart cart);
-    void addItem(Cart cart, Item item);
-    void removeItem(Cart cart, Item item);
+    List<ItemResponse> findAllItems(Long cartId);
+    void addItem(Long cartId, Long itemId);
+    void removeItem(Long cartId, Long itemId);
 }
