@@ -1,4 +1,4 @@
-package org.example.shoppingcartapi;
+package org.example.shoppingcartapi.configuration;
 
 import org.example.shoppingcartapi.entity.Cart;
 import org.example.shoppingcartapi.entity.Item;
@@ -18,7 +18,7 @@ import java.util.Optional;
 public class LoadDatabase {
 
     @Bean
-    CommandLineRunner initializeDatabase(CartRepository cartRepository, ItemRepository itemRepository) {
+    public CommandLineRunner initializeDatabase(CartRepository cartRepository, ItemRepository itemRepository) {
         return args -> {
             itemRepository.save(new Item("Banana"));
             itemRepository.save(new Item("Oat milk"));
