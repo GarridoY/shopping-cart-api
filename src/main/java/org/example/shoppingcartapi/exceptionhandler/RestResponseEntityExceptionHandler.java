@@ -2,7 +2,7 @@ package org.example.shoppingcartapi.exceptionhandler;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.example.shoppingcartapi.exception.EntityNotFoundInListException;
-import org.example.shoppingcartapi.response.ApiError;
+import org.example.shoppingcartapi.contract.response.ApiError;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

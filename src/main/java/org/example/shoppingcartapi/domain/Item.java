@@ -1,4 +1,4 @@
-package org.example.shoppingcartapi.entity;
+package org.example.shoppingcartapi.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,7 +1,7 @@
 package org.example.shoppingcartapi.configuration;
 
-import org.example.shoppingcartapi.entity.Cart;
-import org.example.shoppingcartapi.entity.Item;
+import org.example.shoppingcartapi.domain.Cart;
+import org.example.shoppingcartapi.domain.Item;
 import org.example.shoppingcartapi.repository.CartRepository;
 import org.example.shoppingcartapi.repository.ItemRepository;
 import org.springframework.boot.CommandLineRunner;

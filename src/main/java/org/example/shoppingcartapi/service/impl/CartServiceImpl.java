@@ -1,13 +1,13 @@
 package org.example.shoppingcartapi.service.impl;
 
 import jakarta.persistence.EntityNotFoundException;
-import org.example.shoppingcartapi.entity.Cart;
-import org.example.shoppingcartapi.entity.Item;
+import org.example.shoppingcartapi.domain.Cart;
+import org.example.shoppingcartapi.domain.Item;
 import org.example.shoppingcartapi.exception.EntityNotFoundInListException;
 import org.example.shoppingcartapi.mapper.ItemMapper;
 import org.example.shoppingcartapi.repository.CartRepository;
 import org.example.shoppingcartapi.repository.ItemRepository;
-import org.example.shoppingcartapi.response.ItemResponse;
+import org.example.shoppingcartapi.contract.response.ItemResponse;
 import org.example.shoppingcartapi.service.CartService;
 import org.springframework.stereotype.Service;
 

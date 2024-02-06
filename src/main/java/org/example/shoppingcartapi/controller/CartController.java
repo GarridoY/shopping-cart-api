@@ -1,7 +1,7 @@
 package org.example.shoppingcartapi.controller;
 
-import org.example.shoppingcartapi.request.AddItemRequest;
-import org.example.shoppingcartapi.response.ItemResponse;
+import org.example.shoppingcartapi.contract.request.AddItemRequest;
+import org.example.shoppingcartapi.contract.response.ItemResponse;
 import org.example.shoppingcartapi.service.CartService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

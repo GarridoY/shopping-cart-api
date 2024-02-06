@@ -1,6 +1,6 @@
 package org.example.shoppingcartapi.repository;
 
-import org.example.shoppingcartapi.entity.Cart;
+import org.example.shoppingcartapi.domain.Cart;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,7 @@
 package org.example.shoppingcartapi.mapper;
 
-import org.example.shoppingcartapi.entity.Item;
-import org.example.shoppingcartapi.response.ItemResponse;
+import org.example.shoppingcartapi.domain.Item;
+import org.example.shoppingcartapi.contract.response.ItemResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.function.Function;

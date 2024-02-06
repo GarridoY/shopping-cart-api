@@ -1,4 +1,4 @@
-package org.example.shoppingcartapi.response;
+package org.example.shoppingcartapi.contract.response;
 
 /**
  * @author Daniél Garrido

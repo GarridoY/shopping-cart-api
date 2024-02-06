@@ -1,6 +1,6 @@
 package org.example.shoppingcartapi.service;
 
-import org.example.shoppingcartapi.response.ItemResponse;
+import org.example.shoppingcartapi.contract.response.ItemResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
