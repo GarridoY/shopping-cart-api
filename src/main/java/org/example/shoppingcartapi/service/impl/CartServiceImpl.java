@@ -32,7 +32,8 @@ public class CartServiceImpl implements CartService {
 
     @Override
     public List<ItemResponse> findAllItems(Long cartId) {
-        return cartRepository.getByIdSimple(Cart.class, cartId).getItems().stream()
+        Cart cart = cartRepository.findById(cartId).orElseThrow(EntityNotFoundException::new);
+        return cart.getItems().stream()
                 .map(itemMapper)
                 .collect(Collectors.toList());
     }
@@ -40,7 +41,7 @@ public class CartServiceImpl implements CartService {
     @Override
     public void addItem(Long cartId, Long itemId) {
         Cart cart = cartRepository.findById(cartId).orElseThrow(EntityNotFoundException::new);
-        Item item = itemRepository.getByIdSimple(Item.class, itemId);
+        Item item = itemRepository.findById(itemId).orElseThrow(EntityNotFoundException::new);
 
         cart.getItems().add(item);
         cartRepository.save(cart);
@@ -48,8 +49,8 @@ public class CartServiceImpl implements CartService {
 
     @Override
     public void removeItem(Long cartId, Long itemId) {
-        Cart cart = cartRepository.getByIdSimple(Cart.class, cartId);
-        Item item = itemRepository.getByIdSimple(Item.class, itemId);
+        Cart cart = cartRepository.findById(cartId).orElseThrow(EntityNotFoundException::new);
+        Item item = itemRepository.findById(itemId).orElseThrow(EntityNotFoundException::new);
 
         if (!cart.getItems().contains(item)) {
             throw new EntityNotFoundInListException("Item was not found in cart");

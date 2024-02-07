@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
  * @author Daniél Garrido
  */
 @Repository
-public interface ItemRepository extends CrudRepository<Item, Long>, EntityRepository<Item> {
+public interface ItemRepository extends CrudRepository<Item, Long> {
 }
