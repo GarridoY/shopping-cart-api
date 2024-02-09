@@ -1,4 +1,4 @@
-package org.example.shoppingcartapi.smoketest;
+package org.example.shoppingcartapi.smoke.controller;
 
 import org.example.shoppingcartapi.controller.CartController;
 import org.junit.jupiter.api.Test;

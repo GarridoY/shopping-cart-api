@@ -1,4 +1,4 @@
-package org.example.shoppingcartapi.unit;
+package org.example.shoppingcartapi.unit.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.shoppingcartapi.contract.request.AddItemRequest;
