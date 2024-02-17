@@ -42,6 +42,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:
-          tag_name: ${{ github.sha }} # tag based on commit SHA
-          release_name: Release ${{ github.ref }} # name based on branch
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
           prerelease: ${{ github.ref == 'staging' }}
