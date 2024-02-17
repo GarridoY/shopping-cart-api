@@ -36,8 +36,6 @@ jobs:
     
     steps:
       - uses: actions/download-artifact@v3
-        with:
-          name: shopping-cart-api
 
       - name: Release ${{ github.ref }}
         uses: actions/create-release@v1
