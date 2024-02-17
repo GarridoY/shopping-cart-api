@@ -37,11 +37,11 @@ jobs:
         with:
           name: shopping-cart-api
 
-      - name: Release ${{ github.ref }}
+      - name: Release ${{ github.ref_name }}
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:
-          tag_name: ${{ github.ref.name }}
-          release_name: Release ${{ github.ref.name }}
-          prerelease: ${{ github.ref.name == 'staging' }}
+          tag_name: ${{ github.ref_name }}
+          release_name: Release ${{ github.ref_name }}
+          prerelease: ${{ github.ref_name == 'staging' }}
