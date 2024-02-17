@@ -1,7 +1,4 @@
-# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
-# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
-
-name: Build and Publish Maven package
+name: CD with Maven
 
 on:
   push:
@@ -32,3 +29,21 @@ jobs:
       run: mvn --batch-mode deploy
       env:
         GITHUB_TOKEN: ${{ github.token }}
+
+  release:
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: org.example.shopping-cart-api
+
+      - name: Release ${{ github.ref }}
+        uses: actions/create-release@v3
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          tag_name: ${{ github.sha }} # tag based on commit SHA
+          release_name: Release ${{ github.ref }} # name based on branch
+          prerelease: ${{ github.ref == 'staging' }}
